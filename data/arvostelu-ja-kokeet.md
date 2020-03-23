@@ -26,7 +26,7 @@ Pidä huoli, että ilmoittaudut avoimeen yliopistoon viimeistään tenttiä edel
 Pääset kirjautumaan kurssin Moodleen, kun toimit seuraavien ohjeiden mukaisesti:
 1.	Tee [Avoimen yliopiston kurssi-ilmoittautuminen](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?o=130350689).
 2.	Odota 24 tuntia ja aktivoi Helsingin yliopiston käyttäjätunnus. Saat ohjeet aktivointia varten ilmoittautumista seuraavana päivänä.
-3.	Kirjaudu [Opintoi-sivulle](https://student.helsinki.fi/opintoni), josta löydät kurssiavaimen  ja linkin Moodleen kirjautumista varten.
+3.	Kirjaudu [Opintoni-sivulle](https://student.helsinki.fi/opintoni), josta löydät kurssiavaimen  ja linkin Moodleen kirjautumista varten.
 4.	Kirjaudu kurssin Moodleen Helsingin yliopiston käyttäjätunnuksella ja kurssiavaimella
 HUOM!
 -	Ilmoittautuminen Avoimeen yliopiston on mahdollista 28.4.2020 saakka
@@ -36,6 +36,7 @@ HUOM!
 ### TKT20004 Tietoliikenteen perusteet, 5 op
 
 Kurssin osallistujille tämä verkkokurssi on laajemman Tietoliikenteen perusteet -kurssin osasuoritus. Tämän Tietoliikenteen perusteet 2 -verkkokurssin sisältö tentitään kahdessa osassa minikokeissa ma 6.4. ja ma 27.4.
+Tarkemmat ohjeet kurssin moodlessa, jonne on linkki student.helsinki.fi -sivustolta omien kurssiesi kohdalta.
 
 
 
