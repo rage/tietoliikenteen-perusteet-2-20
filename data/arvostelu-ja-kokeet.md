@@ -36,7 +36,7 @@ HUOM!
 ### TKT20004 Tietoliikenteen perusteet, 5 op
 
 Kurssin osallistujille tämä verkkokurssi on laajemman Tietoliikenteen perusteet -kurssin osasuoritus. Tämän Tietoliikenteen perusteet 2 -verkkokurssin sisältö tentitään kahdessa osassa minikokeissa ma 6.4. ja ma 27.4.
-Tarkemmat ohjeet kurssin moodlessa, jonne on linkki student.helsinki.fi -sivustolta omien kurssiesi kohdalta.
+Tarkemmat ohjeet kurssin moodlessa, jonne on linkki (student.helsinki.fi)[https://student.helsinki.fi/opintoni] -sivustolta omien kurssiesi kohdalta.
 
 
 
