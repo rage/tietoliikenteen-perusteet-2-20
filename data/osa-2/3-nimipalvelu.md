@@ -58,7 +58,7 @@ Nimipalvelussa on vain yksi viestirakenne, jota käytetään sekä kyselyissä e
 
 Oheisessa kuvassa, joka on peräisin wikibooksista, on kuvattuna koko viestin rakenne, eikä vai otsaketta. Rakennekuvauksesta käy ilmi, että otsaketietoja viestissä on kaikkiaan 12 tavua. Niitä seuraa kysymysosio, jossa voi olla useita kysymyksiä selvitettäväksi. Kysymysosan ja muiden osien tietuiden lukumäärä on kerrottava otsaketiedoissa, jotta vastaanottaja osaa tulkita saamansa tavujonon oikein. Yleensä kysymyksen viestissä vastauskentät ovat tyhjiä.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Dns_message.jpg/512px-Dns_message.jpg">
+<a title="Richard.bhuleskar at English Wikibooks / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.5)" href="https://commons.wikimedia.org/wiki/File:Dns_message.jpg"><img width="512" alt="Dns viesti: Viestissä on ensin 12 tavuinen otsake ja sen jälkeen nuo viestin neljä osiota peräkkäin järjestykessä: kysely, resurssitietueet, autoritäärisiä nimipalvelimia, hyödyllistä lisätietoa" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Dns_message.jpg/512px-Dns_message.jpg"></a>
 
 KUVA: Kuva DNS viestistä (lähde <a href="https://en.wikibooks.org/wiki/Communication_Networks/DNS#/media/File:Dns_message.jpg">wikibooks</a>, tekijä Richard.bhuleskar (<a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a>))
 
