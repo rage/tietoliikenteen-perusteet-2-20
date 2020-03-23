@@ -83,8 +83,8 @@ Osa porttinumeroista on varattu tietyille tunnetuille palveluille. [Internet Ass
 
 Sovellusohjelmassa pisto pitää ensin luoda (socket). TCP:n knssa käytettävät tavuvirtapistokkeet pitää lisäksi yhdistää kommunikoinnin vastapuoleen. Tämä on erilainen asiakkaalla (connect) ja palvelimella (bind, listen ja accept). Sen jälkeen pistokkeen avulla voi lähettää (send) ja vastaanottaa (receive) viestejä. Lopuksi pistoke pitää vielä sulkea (close). UDP:n kanssa käytettävät tietosähkepistokkeet eivät edellytä pistokkeiden yhdistämistä, mutta lähetys- ja vastaanotto-operaatioissa pitää kuljettaa mukana tietoa kommunikoinnin vastapuolesta, siksi niillä on omat lähetys (sendto) ja vastaanotto (receivefrom) funktiot. Huomaa, että jo pistokkeen avauksessa pitää päättää kummanlaisen pistokkeen avaa ja sitten sitä pitää käyttää kyseisellä tavalla. Käyttötapoja ei siis pidä sekoittaa.
 
+<img src="../img/2-5-pistoke-asiakas-palvelin.svg">
 
-KUVA:  2017, Luento 3, luento 59 - Kuvassa asiakas voisi olla vasemmalla, mutta palvelimen toimet ajallisesti selvästi ylemmäs, jotta mielikuva siitä, että palvelimen pitää olla kuulemassa syntyy ilman pitkää selitystä.
 KUVA: Kuvassa on TCP:n kanssa käytettävien tavuvirtapistokkeiden funktiot. Lisäksi kuvaan on piirretty TCP:n yhdeyden muodostukseen liittyvät viestit (conn.req ja conn.ack), esimerkin omaisesti kaksi data viestiä ja yhteyden purkamiseen liittyvä viestit (disconn.req ja disconn.ack). TCP-yhteys tulee seuraavassa luvussa tarkemmin.
 
 Tässä vielä esimerkiksi toimiva python koodi, jolla voit halutessasi kokeilla verkko-ohjelman toimintaa.
