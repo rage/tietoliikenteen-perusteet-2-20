@@ -69,7 +69,8 @@ Prosessin verkkoyhteys on sidottu tiettyyn pistokkeeseen, joka on sidottu kuljet
 
 
 <img src="../img/2-5-pistokekuva.png"  alt="Kuvassa on kaksi laitetta, joista ensimmäisellä on useita prosesseja, joihin on liitetty pistoke per prosessi. Ne kaikki kommunikoivat toisella laitteella olevan yhden prosessin kanssa, johon on myös liitetty vain yksi pistoke.">
-KUVA: Kuvassa on prosesseja ja niihin liitettyjä pistokkeita. Prosessilla voi olla useita pistokkeita, vaikka tässä kuvassa niitä onkin vain yksi. Kukin pistoke on kuvattuna sitä vastaavalla porttinumerolla.  Kaikki asiakas koneen prosesit kommunikoivat saman palvelinlaitteella toimivan palvelinprosessin kanssa.  Kuljetuskerros tunnistaa jokaisen prosessin pistokkeen niihin liitetystä porttinumerosta. Muistathan, että porttinumero yksilö prosessin vain yhden laitteen sisällä eli eri laitteilla olevat prosessit voivat käyttää samoja porttinumeroita. TODO svg
+
+KUVA: Kuvassa on prosesseja ja niihin liitettyjä pistokkeita. Prosessilla voi olla useita pistokkeita, vaikka tässä kuvassa niitä onkin vain yksi. Kukin pistoke on kuvattuna sitä vastaavalla porttinumerolla.  Kaikki asiakas koneen prosesit kommunikoivat saman palvelinlaitteella toimivan palvelinprosessin kanssa.  Kuljetuskerros tunnistaa jokaisen prosessin pistokkeen niihin liitetystä porttinumerosta. Muistathan, että porttinumero yksilö prosessin vain yhden laitteen sisällä eli eri laitteilla olevat prosessit voivat käyttää samoja porttinumeroita.
 
 Osa porttinumeroista on varattu tietyille tunnetuille palveluille. [Internet Assigned Numbers Authority (IANA)](https://www.iana.org), hallinnoi internetin IP-numeroita ja myös erilaisten palvelujen porttinumeroita. IANA ylläpitää myös muuta internetin ja sen protokollien käyttöön liittyvää tietoa.
 
