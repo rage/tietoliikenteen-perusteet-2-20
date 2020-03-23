@@ -80,7 +80,7 @@ Käyttäjän asiakaskoneen tekemiin nimipalvelukyselyihin vastaavat tyypillisest
 
 <a title="Lion Kimbro / Public domain" href="https://commons.wikimedia.org/wiki/File:DNS_in_the_real_world.svg"><img width="512" alt="Käyttäjän koneella on sovellustasolta kuvattuna sähköposti ja www-selain. Ne käyttävät käyttöjärjestelmän tarjoamaa paikallista nimipalvelua, jolla on oma pieni välimuisti aiemmin tehtyjä kyselyjä varten. Paikallinen nimipalvelija käyttää internet palveluntarjoajan (ISP) nimipalvelua nimipalvelupyyntöjen ratkomiseen." src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DNS_in_the_real_world.svg/512px-DNS_in_the_real_world.svg.png"></a>
 
-KUVA: Kuvassa on yksityiskohtaisempi kuvaus siitä, että sekä käyttäjän omalla koneella täytyy olla jotain nimipalvelutoiminnallisuutta. vähintäänkin sen pitää osata ottaa yhteyttä paikalliseen nimipalvelijaan (jonka osoitteen se on saanut DHCP-kyselyn yhteydessä).
+KUVA: Kuvassa on yksityiskohtaisempi kuvaus siitä, että sekä käyttäjän omalla koneella täytyy olla jotain nimipalvelutoiminnallisuutta. vähintäänkin sen pitää osata ottaa yhteyttä paikalliseen nimipalvelijaan (jonka osoitteen se on saanut DHCP-kyselyn yhteydessä). (Lähde: <a title="Lion Kimbro / Public domain" href="https://commons.wikimedia.org/wiki/File:DNS_in_the_real_world.svg"> wikibooks, tekijä Lion Kimbro</a>
 
 Oheisessa kuvassa on kuvattuna tyypillinen paikallisen ISP:n nimipalvelijan toiminta silloin, ku se ratkoo käyttäjältä, omalta asiakkaaltaan, tulleen nimipalvelupyynnön. Seuraavaksi käydään tällaisen paikallisen nimipalvelijan toimintaa läpi kuvan esimerkin valossa. Kuvassa haetaan www.firma.fi nimeä vastaavaa IP-osoitetta.
 
