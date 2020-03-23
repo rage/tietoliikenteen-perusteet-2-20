@@ -21,7 +21,7 @@ a) tutkinto-opiskelijoille tarkoitetulle kurssille [TKT20004 Tietoliikenteen per
 
 tai
 
-a) Avoimen yliopiston opiskelijoille, erityisesti DEFA-opintoja tekeville, tarkoitetulle kurssille [AYTKT200041 Avoin yo: Tietoliikenteen perusteet 2, MOOC, kevät 2020](https://courses.helsinki.fi/fi/aytkt200042/130350689), joka alkaa 1.4. 
+a) Avoimen yliopiston opiskelijoille, erityisesti DEFA-opintoja tekeville, tarkoitetulle kurssille [AYTKT200042 Avoin yo: Tietoliikenteen perusteet 2, MOOC, kevät 2020](https://courses.helsinki.fi/fi/aytkt200042/130350689), joka alkaa 1.4. 
 
 Huomaa, että opintopisteellisiin suorituksiin liittyy myös muita pakollisia osioita kuin vain tämä verkkomateriaali.
 
