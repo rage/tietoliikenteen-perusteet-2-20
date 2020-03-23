@@ -3,7 +3,7 @@ const courseSettings = {
   name: "Tietoliikenteen perusteet 2 2020",
   siteUrl: "https://tietoliikenteen-perusteet-2-20.mooc.fi",
   githubUrl: "https://github.com/rage/tietoliikenteen-perusteet-2-20",
-  subtitle: "Ohjelmoinnin alkeet kaikille, ilmaiseksi",
+  subtitle: "Yleiskuva internetistä ja sen protokollista",
   slug: "tietoliikenteen-perusteet-2-20",
   tmcCourse: "x",
   quizzesId: "5e304e42-0cea-4403-8ff3-e32dd882bf67",
