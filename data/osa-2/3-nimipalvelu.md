@@ -78,7 +78,10 @@ Nimipalvelutietoja voi kysellä nslookup tai dig -komennoilla. Linuxin komentotu
 
 Käyttäjän asiakaskoneen tekemiin nimipalvelukyselyihin vastaavat tyypillisesti paikalliset nimipalvelijat (ns. resolverit), jotka eivät ole autoritäärisiä. Esimerkiksi minun työkoneeni yliopistolla käyttää paikallista nimipalvelijaa ns-guest-1.it.helsinki.fi. Tämä ei ole helsinki.fi alueesta vastaava autoritäärinen nimipalvelija, vaan sen tehtävänä on nimenomaan ratkoa asiakaskoneilta tulevia kyselyjä.
 
-Oheisessa kuvassa on kuvattuna tyypillisen nimipalvelukyselyn vaiheet ja siihen liittyvät koneet. Seuraavaksi käydään paikallisen nimipalvelijan toimintaa läpi kuvan esimerkin valossa. Kuvassa haetaan www.firma.fi nimeä vastaavaa IP-osoitetta.
+<a title="Lion Kimbro / Public domain" href="https://commons.wikimedia.org/wiki/File:DNS_in_the_real_world.svg"><img width="512" alt="DNS in the real world" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DNS_in_the_real_world.svg/512px-DNS_in_the_real_world.svg.png"></a>
+KUVA: Kuvassa on yksityiskohtaisempi kuvaus siitä, että sekä käyttäjän omalla koneella täytyy olla jotain nimipalvelutoiminnallisuutta. vähintäänkin sen pitää osata ottaa yhteyttä paikalliseen nimipalvelijaan (jonka osoitteen se on saanut DHCP-kyselyn yhteydessä).
+
+Oheisessa kuvassa on kuvattuna tyypillinen paikallisen nimipalvelijan toiminta silloin, ku se ratkoo käyttäjältä, omalta asiakkaaltaan, tulleen nimipalvelupyynnön. Seuraavaksi käydään paikallisen nimipalvelijan toimintaa läpi kuvan esimerkin valossa. Kuvassa haetaan www.firma.fi nimeä vastaavaa IP-osoitetta.
 
 <img src="../img/2-3-nimipalvelukysely.svg">
 
