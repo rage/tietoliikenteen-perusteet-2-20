@@ -17,21 +17,21 @@ Tämä kevään 2020 kurssi on tarkoitettu kaikille aiheesta kiinnostuneille.
 
 Kurssin suorittamisesta voi saada opintopisteitä vain osallistumalla joko
 
-a) tutkinto-opiskelijoille tarkoitetulle kurssille [TKT20004 Tietoliikenteen perusteet](https://courses.helsinki.fi/fi/tkt20004/131058728), joka alkoi jo 9.3.
+a) kurssille [TKT20004 Tietoliikenteen perusteet](https://courses.helsinki.fi/fi/tkt20004/131058728), joka alkoi jo 9.3. Tämä on kurssi, joka on suunnattu nimenomaan tutkinto-opiskelijoille
 
 tai
 
-a) Avoimen yliopiston opiskelijoille, erityisesti DEFA-opintoja tekeville, tarkoitetulle kurssille [AYTKT200042 Avoin yo: Tietoliikenteen perusteet 2, MOOC, kevät 2020](https://courses.helsinki.fi/fi/aytkt200042/130350689), joka alkaa 1.4. 
+a) kurssille [AYTKT200042 Avoin yo: Tietoliikenteen perusteet 2, MOOC, kevät 2020](https://courses.helsinki.fi/fi/aytkt200042/130350689), joka alkaa 1.4. Tämä avoimen yliopiston kurssi on suunnattu kaikille niille, jotka eivät tee tuota isompaa 5 op:n kurssia. 
 
 Huomaa, että opintopisteellisiin suorituksiin liittyy myös muita pakollisia osioita kuin vain tämä verkkomateriaali.
 
 ### Avoimen yliopiston kurssin opiskelijat
 
-Tämä verkkokurssi edellyttää aiemman Tietoliikenteen perusteet 1 -kurssin suorittamista. 
+Tämä verkkokurssi edellyttää aiemman Tietoliikenteen perusteet 1 -kurssin suorittamista. (Tai viime vuotista Johdatus tietoliikenteeseen -kurssia).
 
-Verkkokurssia voi seurata ja tehdä tehtäviä ilman ilmoittautumista avoimeen yliopistoon.
+Verkkokurssia voi seurata ja tehdä tehtäviä myös ilman ilmoittautumista avoimeen yliopistoon.
 
-Jos haluat suoritusmerkinnän kursista, niin sitten sinun täytyy ilmoittautua kursille Helsingin yliopiston avoimen yliopiston opiskelijaksi ja tämän kurssin opiskelijaksi avoimen yliopiston kautta viimeistään 28.4.2020
+Jos haluat suoritusmerkinnän kursista, niin sitten sinun täytyy ilmoittautua Helsingin yliopiston avoimen yliopiston opiskelijaksi ja tämän kurssin opiskelijaksi avoimen yliopiston kautta viimeistään 28.4.2020
 
 Teillä on mahdollisuus saada kurssista [Tietoliikenteen perusteet 2](https://courses.helsinki.fi/fi/aytkt200041/130350689) 3 op:n suoritusmerkintä noudattamalla kurssin ohjeita. Tähän kurssiin liittyy koe, joka tehdään yliopiston moodle-alustalla.
 
@@ -42,6 +42,6 @@ Ilmoittautumisohjeet kohdassa [arvostelu ja kokeet](./arvostelu-ja-kokeet).
 
 ### HY:n omat tutkinto-opiskelijat
 
-Tämä on osa kurssia [Tietoliikenteen perusteet](https://courses.helsinki.fi/fi/tkt20004/131058728). Tämä ei siis ole itsenäinen opintokokonaisuus vaan osa laajempaa kurssia. Tämän osien suorituksesta ei anneta erillistä suoritusmerkintää. Osion sisällön hallinta testataan kurssin kahdessa jälkimmäisessä minikokeessa ma 6.4. ja ma 27.4.
+Tämä on osa kurssia [Tietoliikenteen perusteet](https://courses.helsinki.fi/fi/tkt20004/131058728). Tämä ei siis ole itsenäinen opintokokonaisuus vaan osa laajempaa kurssia. Tämän osion suorituksesta ei anneta erillistä suoritusmerkintää. Osion sisällön hallinta testataan kurssin kahdessa jälkimmäisessä minikokeessa ma 6.4. ja ma 27.4.
 
 Helsingin yliopiston opiskelijat ovat jo ilmoittautuneet kurssille ensimmäisen osan yhteydessä, joten tämän osion osalta erillistä ilmoittautumista OODIssa ei tarvita.
