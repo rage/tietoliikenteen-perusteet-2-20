@@ -21,7 +21,7 @@ Langaton verkko, väylätopologia ja toisinaan myös tähtitopologia ovat yleisl
 
 Kanavan lähetysvuorojen jakelusta käytetään useita erilaisia englanninkielisiä termejä, ainakin channel access method, multiple-access protocol ja media access control (eli MAC). Niminä ne korostavat vuoronjaon eri ominaisuuksia. Suomen kielen termmi 'lähetysvuorojen jakelu' on muuten kuvaava, mutta se ei valitettavsti ota kantaa siihen, että usein kyse on nimenomaan lähettäjällä tapahtuvasta päätöksenteosta. Englanninkieliset termit korostavat nimenomaan siitä, että kyse on lähettäjän tai viestin pääsystä (access) kanavalle.
 
-Vuoronjakomenetelmää suunniteltaessa on siis päätettävä, miten solmu päättelee voiko se lähettää ja kuinka solmun on toimittava törmäystilanteessa. Huomaa, että tietoliikenteessä meillä on käytettävissä vain tämä yksi kanava, jolloin kaikki tarvittava neuvottelu lähetysvuoroista käydään tässä yhdessä ja samassa kanavassa, jossa myös dataviestit kulkevat. Neuvotteluissakin lähetetään ja vastaanotetaan viestejä, joiden lähetysvuoroista pitäisi sopia. Tässä siis sekä kontrolli (engl. control) että data kulkevat samassa kanavassa. 
+Vuoronjakomenetelmää suunniteltaessa on siis päätettävä, miten solmu päättelee voiko se lähettää ja kuinka solmun on toimittava törmäystilanteessa. Huomaa, että tietoliikenteessä meillä on käytettävissä vain tämä yksi kanava, jolloin kaikki tarvittava neuvottelu lähetysvuoroista käydään tässä yhdessä ja samassa kanavassa, jossa myös dataviestit kulkevat. Neuvotteluissakin lähetetään ja vastaanotetaan viestejä, joiden lähetysvuoroista pitäisi sopia. Tässä siis sekä kontrolli (engl. control) että data kulkevat samassa kanavassa.
 
 Yhteiskäyttöisen kanavan vuoronjakomenetelmä valitaan siten, että saamme mahdollisimman suuren osa kanavasta hyötykäyttöön. Tällöin menetelmän aiheuttama yleisrasite on pieni ja lähetysvuoroista sopiminen tehdään kustannustehokkaasti. Menetelmä on tällöin yleensä myös yksinkertainen ja halpa toteuttaa.
 
@@ -36,9 +36,11 @@ Lähetysvuorojen jakaminen yhdellä kanavalla voidaan tehdä usealla eri tavalla
 
 Kanavan jaolla annetaan jokaiselle lähettäjälle oma pala kanavasta. Lähettäjä saa tässä palasessa lähettää omia viestejä ilman, että muiden lähettäjien viestien signaalit häiritsevät lähetystä. Näin kukin solmu saa oman viipaleensa. Voimme jakaa kanavan paloihin ajan tai taajuuden perusteella. Lisäksi on mahdollista käyttää erilaisia bittien koodaustapoja, jolloin samassa kanavassa voidaan samanaikaisesti lähettää useita eri viestejä, jotka vastaaottaja pystyy edelleen erottamaan toisistaan.
 
-Tässä siis oleellista on se, että lähettäjän käyttäessä sille varattua osaa kanavasta, ei yhteentörmäyksiä tapahdu, jolloin kyseinen osa kanavasta on aina lähettäjän käytettävissä. Näin kyseinen osa kanavasta on varattuna tälle lähettäjälle silloinkin, kun se ei sitä tarvitse. 
+Tässä siis oleellista on se, että lähettäjän käyttäessä sille varattua osaa kanavasta, ei yhteentörmäyksiä tapahdu, jolloin kyseinen osa kanavasta on aina lähettäjän käytettävissä. Näin kyseinen osa kanavasta on varattuna tälle lähettäjälle silloinkin, kun se ei sitä tarvitse.
 
 Aikaviipaloidussa kanavassa, ns. [aikajakokanavointi](https://fi.wikipedia.org/wiki/TDMA) (engl. time-division multiple access, TDMA), jaetaan tietty aikajakso vakiokokoisiin aikaviipaleisiin siten, että aikaviipaleen pituus on yhden kehyksen lähetysaika ja jokainen lähettäjä saa (yhden) aikaviipaleen kerran tämän pidemmän aikajakson kuluessa.
+
+<img src="../img/1-4-aikajako-vs-taajuusjako.svg" alt="">
 
 KUVA:  Kanava jaettu aikaviipaleisiin ja niissä lähettäjät. Viereen sama kanava, mutta myt taajuusjaoteltuna
 
@@ -48,7 +50,7 @@ Sekä aikajaossa että taajuusjaossa lähettävä solmu (tai asema) saa käyttö
 
 [Koodijakokanavoinnissa](https://fi.wikipedia.org/wiki/CDMA) (engl. code division multiple access, CDMA) voidaan koko kanavan kapasiteetti antaa kaikkien lähettäjien käyttöön samanaikaisesti. Tätä käytetään lähinnä radiotiellä, jossa jokaisella asemalla on yksilöllinen (ja muiden kanssa ortogonaalinen) tapa koodata bitit 1 ja 0. Nyt kaikkien asemien lähettämät signaalit voivat vapaasti sekoittua radioaalloilla. Vastaanottajan pitää vain tietää, millä koodauksella sille tulevat viestit on koodattu ja se voi tämän avulla erotella saapuvasta yhteissignaalista itselleen kuuluvat bitit.
 
- 
+
 ### Vuorotteluprotokollat
 
 Vuorotteluprotokollia (engl. taking-turns protocols) kutsutaan myös vuoronantoprotokolliksi, koska niille on tyypillistä se, että kanavan käyttövuorot jaetaan jollakin etukäteen sovitulla tavalla (kuten vuorokysely tai vuoromerkki), mutta vain niille, joilla on jotain lähetettävää. Näin vältetään kanavan pitäminen turhaan varattuna. Toisaalta, kun lähettäjällä on lähetysvuoro, niin kaikki tietävät sen, eikä viestien yhteentörmäyksiä kanavassa pääse syntymään.
@@ -65,13 +67,13 @@ Näissä vuorottelumenetelmissä on yksi iso ongelma, ns. 'single point of failu
 
 ### Kilpailuprotokollat
 
-Kilpailuprotokollista (engl. random access protocols) käytetään englanniksi myös termiä multiple access protocols. Lähettäjiä on useita ja ne kilpailevat lähetysvuoroista. Lähettäessään niiden pitää noudattaa tiettyjä sääntöjä, mutta etukäteen ei ole tiedossa milloin ja missä järjestyksessä lähettäjät voivat toimia. Periaatteena on siis yksinkertaisesti "kuka ensin ehtii". 
+Kilpailuprotokollista (engl. random access protocols) käytetään englanniksi myös termiä multiple access protocols. Lähettäjiä on useita ja ne kilpailevat lähetysvuoroista. Lähettäessään niiden pitää noudattaa tiettyjä sääntöjä, mutta etukäteen ei ole tiedossa milloin ja missä järjestyksessä lähettäjät voivat toimia. Periaatteena on siis yksinkertaisesti "kuka ensin ehtii".
 
 Koska mitään keskistettyä jakoa tai vuorottelua ei ole, niin jokaisen solmun pitää itsenäisesti, pelkästään sen hetkisen paikallisen tiedon varassa, tehdä päätös viestin lähettämisestä tai lähetyksen viivästämisestä. Kun solmu haluaa lähettää, niin se ensin kuuntelee, onko joku muu solmu jo lähettämässä. Jos ei ole, niin solmu aloittaa oman lähetyksensä. Kaikki lähetykset tehdään aina kanavan täydellä nopeudella. Jos joku muu jo lähettää, niin solmu viivästää omaa lähetystään ja odottaa kanavan vapautumista.
 
 Koska lähettäjät kilpailevat kanavasta, niin on mahdollista, että kaksi lähettäjää yrittää lähettää samaan aikaan ja tapahtuu yhteentörmäys. Mikäli kahden lähettäjän viestit ovat kanavassa samaan aikaan, niin kumpikin viesti tuhoutuu, koska niiden signaaleja ei voi sekoittumisen jälkeen enää erottaa. Kun tällainen viestien törmäys tapahtuu, niin molemmat lähettäjät joutuvat lähettämään omat viestinsä myöhemmin uudelleen.
 
-Solmun pitää tavalla tai toisella havaita törmäys. Tässä suhteessa eri protokollat toimmivat eri tavalla. Niissä on myös eroja siinä, miten törmäyksestä toivutaan eli miten ja milloin uudelleenlähetys tapahtuu. Tyypillisesti törmäyksen jälkeen solmu odottaa satunnaisen (engl. random) ajan ja yrittää sitten uudelleen. 
+Solmun pitää tavalla tai toisella havaita törmäys. Tässä suhteessa eri protokollat toimmivat eri tavalla. Niissä on myös eroja siinä, miten törmäyksestä toivutaan eli miten ja milloin uudelleenlähetys tapahtuu. Tyypillisesti törmäyksen jälkeen solmu odottaa satunnaisen (engl. random) ajan ja yrittää sitten uudelleen.
 
 
 #### Aloha ja viipaloitu aloha
@@ -89,7 +91,7 @@ ALOHAsta tehtiin paranneltu versio, jossa karsittiin osittain päällekkäiset y
 
 Kun siirtokehys on valmis, niin solmu lähettää sen heti seuraavassa aikaviipaleessa. Jos ei tullut yhteenörmäystä, niin solmu voi lähettää seuraavan kehyksen heti seuraavassa aikaviipaleessa. Jos lähetyksessä tuli yhteentörmäys, niin solmu yrittää lähetystä uudelleen seuraavassa aikaviipaleessa jollakin todennäköisyydellä p.
 
-Viipaloidulla ALOHAssa saadaan kanavan kapasiteetista käyttöön noin 37%, mikä on kaksinkertainen määrä alkuperäiseen ALOHAan verrattuna. Englanninkielisessä wikipediassa on hyvin kuvattu matemaattinen päättelyketju tämän tehokkuusluvun laskennassa. 
+Viipaloidulla ALOHAssa saadaan kanavan kapasiteetista käyttöön noin 37%, mikä on kaksinkertainen määrä alkuperäiseen ALOHAan verrattuna. Englanninkielisessä wikipediassa on hyvin kuvattu matemaattinen päättelyketju tämän tehokkuusluvun laskennassa.
 
 Viipaloitua ALOHAa käytetään edelleen tietyissä erikoistilanteissa, koska se on toteutukseltaan ja toiminnaltaan hyvin yksinkertainen ja koska se sallii yhden lähettäjän lähettää täydellä nopeudella, jos muita lähettäjiä ei samanaikaisesti ole.
 
@@ -123,7 +125,7 @@ Solmun, tai oikeammin sen verkkosovittimen (verkkokortti ja sen laiteohjain), to
 2) Jos verkkosovitin havaitsee, että kanava on tyhjä, niin se aloittaa kehyksen lähetyksen samantien. Jos se havaitsee, että kanava on käytössä, niin se odottaa kunnes kanava on tyhjä ja aloittaa sitten kehyksen lähetyksen.
 3) Kun kehyksen lähetys on käynnissä, verkkosovitin kuuntelee kanavaa ja pyrkii havaitsemaan jonkun muun lähettämän signaalin.
 4) Jos verkkosovitin havaitsee signaalin, niin se lopettaa kehyksen lähettämisen (vaaditun minimikoon jälkeen).
-5) Jos kehyksen lähetys päättyy, eikä muiden signaaleja ole kuultu, niin kehyksen lähetys on onnistunut. 
+5) Jos kehyksen lähetys päättyy, eikä muiden signaaleja ole kuultu, niin kehyksen lähetys on onnistunut.
 6) Jos kehyksen lähetys päättyi keskeytykseen, niin verkkosovitin odottaa satunnaisen ajan ja jatkaa kohdasta 2.
 
 Tuo verkkosovittimien satunnainen odotusaika kasvaa jokaisen peräkkäisen yhteentörmäyksen yhteydessä. Tästä käytetään englanninkielistä termiä binary exponential backoff. Odotusaika valitaan satunnaisesti kokonaislukujen joukosta {0,1,2,... (2^n)-1}, missä n on peräkkäisten yhteentörmäysten määrä.
