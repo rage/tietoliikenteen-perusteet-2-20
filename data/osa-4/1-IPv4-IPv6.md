@@ -55,7 +55,10 @@ IPv6 osoitteet ovat 128-bittisiä eli huomattavan pitkiä verrattuna IPv4:n 32-b
 
 IPv6:n osoitteet esitetään kahdeksana hexadesimaaliryhmänä, joissa kukin 4-merkkinen hexadesimaaliluku kuvaa 16 bitin mittaista osiota osoitteesta. Muistathan, että hexadesimaalilukujen kantaluku on 16, joten yhdellä hexadesimaaliluvulla voi kuvata 4-bittisen luvun. Nämä 4-merkkiset hexadesinaaliluvut erotetaan toisistaan kaksoispisteellä. Esimerkki osoitteesta 2001:0DB8:AC10:FE01:0000:0000:0000:0000.  Osoitetta kirjoitettaesssa alkunollat voi jättää pois ja nolla-alueen voi jättää tyhjäksi. Kaikki 8 osiota on kuitenkin tunnistettava, joten kaksoispisteitä ei saa jättää pois. Äskeinen osoite mahdollisimman tiiviisti kirjoitettuna on 2001:DB8:AC10:Fe01::::.
 
-Kuva osoitteen purkamisesta: https://upload.wikimedia.org/wikipedia/commons/7/70/Ipv6_address_leading_zeros.svg
+<a title="Ipv6_address.svg: Indeterminate
+derivative work: BobbyPeru / Public domain" href="https://commons.wikimedia.org/wiki/File:Ipv6_address_leading_zeros.svg"><img width="512" alt="Ipv6 address leading zeros" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Ipv6_address_leading_zeros.svg/512px-Ipv6_address_leading_zeros.svg.png"></a>
+
+KUVA: Kuva osoitteen purkamisesta (Lähde: wikimedia)
 
 Koska IPv6:n osoiteavaruus valtava, on erikseen sovittu, että yksittäistä osoitetta operaattorilta pyytävä reititin saa tyypillisesti oman aliverkon, jonka peite on 64 bittiä. Esimerkiksi juuri edellä kuvatun osoitteen. Tähän aliverkkoon liittyvä laite puolestaan saa reitittimeltä aliverkon tunnisteen ja aliverkon peitteen. Osoitteen loput bitit (tyyppillisesti siis jälkimmäiset 64 bittiä) se voi määritellä itse. Automaattisessa konfiguroinnissa voidaan käyttää vaikkapa laitteen MAC-osoitetta apuna. MAC-osoitteen tavoitehan on yksilöidä laite linkkikerroksen tasolla. MAC-osoitteen pituus on 48 bittiä, joten se mahtuu vallan hyvin laitteen aliverkossa yksilöivään 64:ään bittiin. Itseasiassa osoitteen automaattiseen konfigurointiin on määritelty menetelmä, jolla MAC-osoitteen voi muuntaa IPv6 osoitteen osaksi laitteen (tai oikeammin sen verkkoyhteyden) tunnisteeksi.
 
