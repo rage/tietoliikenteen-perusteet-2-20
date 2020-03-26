@@ -112,7 +112,7 @@ TCP:n yhteyden muodostuksessa välitetään kolme viestiä ja siitä käytetää
 
 Kättelyssä kulkee kolme segmenttiä SYN - SYNACK -ACK. Tuo viimeinen ACK voi myös kulkea jo ensimmäisen datasegmentin mukana.
 
-<img src="../img/tcp-kattely.svg" alt="TCP kättelyssä. Yhteyden muodostaja lähettää ensin SYN-viestin. Tähän kommunikoinnin toinen osapuoli vastaa SYNACK -viestiää. Yhteyden muodostaja lähettää vielä ACK-viestin."/>
+<img src="../img/3-5-tcp-kattely.svg" alt="TCP kättelyssä. Yhteyden muodostaja lähettää ensin SYN-viestin. Tähän kommunikoinnin toinen osapuoli vastaa SYNACK -viestiällä. Yhteyden muodostaja lähettää vielä ACK-viestin."/>
 
 KUVA: TCP:n kolmivaiheinen kättely yhteyttä muodostettaessa
 
