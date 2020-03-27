@@ -105,9 +105,11 @@ KUVA: Kuittaus katoaa ja ajastin laukeaa
 
 <img src="../img/3-5-ennenaikainen-uudelleenlahetys.svg" alt="Lähettäjä lähettää kaksi viestiä. Vastaanottajan lähettämät kuittausviestit viivästyvät matkalla. Alkuperäinen lähettäjä odottaa kuittausta mutta ajastin laukeaa ennen ensimmäisen kuittausviestin saapumista, minkä johdosta aiempi ensimmäinen viesti lähetetään uudestaan. Vastaanottaja saa uudelleen lähetetyn viestin ja lähettää nyt viimeisen aiemmin lähettämänsä kuittauksen, joka tällä kerralla pääsee perille ja josta lähettäjä saisi tietää molempien viestien tulleen perille jos niiden kuittaukset olisivat hävinneet matkalla."/>
 
-Kuva: Kuittaus viivästyy ja ajastin laukeaa
+KUVA: Kuittaus viivästyy ja ajastin laukeaa
 
-TODO:  Pari kuvaa, jossa on a) kuittauksen katoaminen ja seuraavalla kuittaus,  (Katso mallia kirjan kuvista 3.34 - 3.36  (eri segmenttinumerot, mutta vastaavat nuolet ok)
+<img src="../img/3-5-seuraavalla-kuittaus.svg" alt="Lähettäjä lähettää kaksi viestiä. Ensimmäinen kuittausviesti katoaa matkalla. Alkuperäinen lähettäjä saa jälkimmäisen kuittausviestin ennen kuin ajastin laukeaa. Tästä käy ilmi että myös ensimmäinen viesti on saapunut perille."/>
+
+KUVA: Kuittaus katoaa ja ajastin laukeaa
 
 
 <quiz id="aa443c8c-8796-498f-925c-e11373e82ff1"></quiz>
