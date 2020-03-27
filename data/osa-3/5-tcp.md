@@ -99,8 +99,11 @@ Sen sijaa TCP:n toiminnan kannalta on eroa sillä katoaako varsinainen datasegme
 
 Toisaalta, jos ajastin laukeaa ennen kuin kuittaus ehtii perille, niin lähettäjä lähettää segmentin uudelleen. Tällaista tilannetta kutsutaan ennenaikaiseksi aikakatkaisuksi (engl. premature timeout). Niitä pyritään välttämään käyttämällä riittävän pitkää aikakatkaisua ajastimessa. Tarpeettomat uudelleenlähetykset kuormittavat verkkoa.
 
+<img src="../img/3-5-katoaminen-ajastin.svg" alt="TCP kuittausviesti katoaa matkalla. Alkuperäinen lähettäjä odottaa kuittausta mutta lopulta ajastin laukeaa, minkä johdosta aiempi viesti lähetetään uudestaan. Vastaanottaja saa viestin ja lähettää nyt saman kuittauksen kuin aiemmin, joka tällä kerralla pääsee perille."/>
 
-TODO:  Pari kuvaa, jossa on a) kuittauksen katoaminen ja seuraavalla kuittaus,  b) kuittauksen katoaminen ja ajastimen laukeaminen. c) ennenaikainen aikakatkaisu  (Katso mallia kirjan kuvista 3.34 - 3.36  (eri segmenttinumerot, mutta vastaavat nuolet ok)
+KUVA: Kuittaus katoaa ja ajastin laukeaa
+
+TODO:  Pari kuvaa, jossa on a) kuittauksen katoaminen ja seuraavalla kuittaus,  b) . c) ennenaikainen aikakatkaisu  (Katso mallia kirjan kuvista 3.34 - 3.36  (eri segmenttinumerot, mutta vastaavat nuolet ok)
 
 
 <quiz id="aa443c8c-8796-498f-925c-e11373e82ff1"></quiz>
