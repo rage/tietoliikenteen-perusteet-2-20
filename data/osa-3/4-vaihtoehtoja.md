@@ -20,13 +20,13 @@ Nyt kun olemme tutustuneet protokollien mallinnukseen ja kuljetuskerroksen proto
 
 ## Oikeellisuustarkistus
 
-Koska viestin kuljetuksessa lähettäjältä vastaanottajalle on aina riski esimerkiksi bittivirheille, on protokollan tehtävä huolehtia mahdollisesta viestin oikeellisuuden tarkistuksesta. Kuljetuskerroksen protokolla voi toki jättää viestin oikeellisuuden tarkistamisen kerroksen protokollan tehtäväksi, mutta yleensä jokainen kerros vastaa vähintään oman otsakkeensa oikeellisuuden tarkistuksesta.
+Koska viestin kuljetuksessa lähettäjältä vastaanottajalle on aina riski esimerkiksi bittivirheille, on protokollan tehtävä huolehtia mahdollisesta viestin oikeellisuuden tarkistuksesta. Kuljetuskerroksen protokolla voi toki jättää viestin oikeellisuuden tarkistamisen sovelluskerroksen protokollan tehtäväksi, mutta yleensä jokainen kerros vastaa vähintään oman otsakkeensa oikeellisuuden tarkistuksesta.
 
 Viestin muuttumattomuus voidaan tarkistaa joko pelkästään virheen havaitsevalla menetelmällä tai menetelmällä, joka voi tarvittaessa myös korjata virheen. Lähettäjä laskee tarvittavan lisätiedon osaksi viestiä ja vastaanottaja tarkistaa, että viesti ei ole muuttunut laskemalla tämän tiedon uudelleen ja vertaamalla sitä viestin mukana tulleeseen tietoon.
 
 Viestin tarkistaminen edellyttää aina tämän lisätiedon eli [tarkistussumman](https://fi.wikipedia.org/wiki/Tarkistussumma) lisäämistä viestiin. Tarkistussummalle varataan kiinteänkokoinen osa protokollan viestistä. Tarkistussumman laskentaan ja tarkistamiseen on tarjolla useita erilaisia menetelmiä.
 
-Jos tyydytään virheen havaitsemiseen, niin silloin ainoa vaihtoehto on hävittää vioittunut paketti. Mikä tahansa laite joka vastaanottaa paketin, jonka tarkistussumma ei vastaanottajalla enää vasta viestin sisältöä, hävittää tällaisen paketin. Virheen havaitsemiseen voidaan käyttää ainakin jotain seuraavista:
+Jos tyydytään virheen havaitsemiseen, niin silloin ainoa vaihtoehto on hävittää vioittunut paketti. Mikä tahansa laite joka vastaanottaa paketin, jonka tarkistussumma ei vastaanottajalla enää vastaa viestin sisältöä, hävittää tällaisen paketin. Virheen havaitsemiseen voidaan käyttää ainakin jotain seuraavista:
 * [pariteetti](https://fi.wikipedia.org/wiki/Pariteetti_(tietotekniikka)) on näistä menetelmistä yksinkertaisin ja se voidaan laskea joko bitti tai tavutasolla.
 * yhteenlaskuun perustuva tarkistussumma, kuten UDP:n tarkistussumma.
 * [tiiviste](https://fi.wikipedia.org/wiki/Tiiviste_(tietotekniikka)) voidaan laskea monella erilaisella tiivistefunktiolla tai tiivistealgoritmilla.
