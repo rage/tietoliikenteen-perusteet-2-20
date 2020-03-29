@@ -26,15 +26,15 @@ KUVA: Kuvassa on kaksi aliverkkoa ja niitä yhdistävät reitittimet. Kummallaki
 Oletetaan, nyt että A haluaa lähettää yhden paketin D:lle. Tämä voisi olla vaikkapa UDP-paketti tai TCP-yhteyden aloittava ACK, mutta koska viestin sisältö on vain A:n ja D:n kannalta merkityksellinen, niin jätetään se tästä tarkastelusta pois. A siis laittaa kuljetuskerroksen segmentin IP-pakettiin, jossa lähettäjänä on A:n oma IP eli 192.162.12.4 ja vastaanottajana D:n IP eli 10.0.0.3. A näkee omasta reititystaulustaan, että tämä paketti pitää ohjata R1:lle, joka osaa käsitellä 10.x verkkoon menevät viestit. IP-paketti laitetaan siis kehykseen, jossa vastaanottajana on R1:den MAC-osoite ja lähettäjänä A:n MAC-osoite. Jos A ei syystä tai toisesta tiedä vielä R1:n MAC-osoitetta, niin se kysyy tiedon ARP-protokollalla.
 
 
-<img alt="Kehys, jonka sisällä IP-paketti. Kehyksessä vastaanottajana R1:n MAC osoite, lähettäjänä A:n MAC osoite. Kehyksen sisällä olevassa IP-paketissa lähettäjänä A IP-osoite ja vastaanottajana D:n IP-osoite.">
+<img src="../img/5-5-kehys1.svg" alt="Kehys, jonka sisällä IP-paketti. Kehyksessä vastaanottajana R1:n MAC osoite, lähettäjänä A:n MAC osoite. Kehyksen sisällä olevassa IP-paketissa lähettäjänä A:n IP-osoite ja vastaanottajana D:n IP-osoite.">
 
 KUVA: Kuvassa on A:n lähettämän kehyksen sisältöä. Tämän esimerkin kannalta meitä kiinnostavat erityisesti osoitteet sekä kehyksessä että IP-paketissa. Muut otsakkeen kentät ja data on jätetty tässä tyhjiksi.
 
-Kun tämä A:n D:lle osoittama viesti saapuu reitittin R1:lle, niin R1 on linkkikerroksen osoitteen mukaan kehyksen vastaanottaja, joten kehys otetaan vastaan ja annetaan kehyksen sisällä oleva IP-paketti reitittimen verkkokerroksen tarkasteltavaksi. Tästä IP-paketista reititin voi nähdä lopullisen vastaanottajan IP-osoitteen. Reititin katsoo omasta reititystaulusta, mihin suuntaan kyseiselle IP-osoitteelle lähetettävä paketti pitää ohjata. Tässä tapauksessa siis paketti pitää lähettää edelleen R2:lle, jonka takaa löytyy 10.x osoitteet.
+Kun tämä A:n D:lle osoittama viesti saapuu reititin R1:lle, niin R1 on linkkikerroksen osoitteen mukaan kehyksen vastaanottaja, joten kehys otetaan vastaan ja annetaan kehyksen sisällä oleva IP-paketti reitittimen verkkokerroksen tarkasteltavaksi. Tästä IP-paketista reititin voi nähdä lopullisen vastaanottajan IP-osoitteen. Reititin katsoo omasta reititystaulusta, mihin suuntaan kyseiselle IP-osoitteelle lähetettävä paketti pitää ohjata. Tässä tapauksessa siis paketti pitää lähettää edelleen R2:lle, jonka takaa löytyy 10.x osoitteet.
 
 R1 lisää nyt tämän IP-paketin, jossa lähettäjänä on A ja vastaanottajana D, ympärille uuden kehyksen. Kehyksessä vastaanottajan osoite on R2:n MAC-osoite ja lähettäjänä on R1:n MAC-osoite. Näin koska linkkikerroksella tämän kehyksen lähettäjä on R1 ja kehys on menossa R2:lle, joten ne ovat kehyksessä lähettäjänä ja vastaanottajana.
 
-<img alt="Kuvassa on kehys, jonka sisällä on IP-paketti. Kehyksessä vastaanottajana on R2:n MAC-osoite ja lähettäjänä R1:n MAC-osoite. Kehyksen sisällä olevassa IP-paketissa lähettäjän on edelleen A:n IP-osoite ja vastaanottajana D:n IP-osoite.">
+<img src="../img/5-5-kehys2.svg" alt="Kuvassa on kehys, jonka sisällä on IP-paketti. Kehyksessä vastaanottajana on R2:n MAC-osoite ja lähettäjänä R1:n MAC-osoite. Kehyksen sisällä olevassa IP-paketissa lähettäjän on edelleen A:n IP-osoite ja vastaanottajana D:n IP-osoite.">
 
 KUVA: R1:n lähettämä kehys, joka on menossa R2:lle. Huomaa, että kehyksessä lähettäjänä on R1 ja vastaanottajana R2, mutta kehyksen sisällä olevassa IP-paketissa lähettäjänä on edelleen A ja vastaanottajana D.
 
