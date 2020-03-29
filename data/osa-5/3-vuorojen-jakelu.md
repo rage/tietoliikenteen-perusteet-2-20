@@ -42,7 +42,7 @@ Aikaviipaloidussa kanavassa, ns. [aikajakokanavointi](https://fi.wikipedia.org/w
 
 <img src="../img/1-4-aikajako-vs-taajuusjako.svg" alt="">
 
-KUVA:  Kanava jaettu aikaviipaleisiin ja niissä lähettäjät. Viereen sama kanava, mutta myt taajuusjaoteltuna
+KUVA:  Kanava jaettu aikaviipaleisiin ja niissä lähettäjät. Vieressä on sama kanava, mutta nyt taajuusjaoteltuna
 
 [Taajuusjakokanavoinnissa](https://fi.wikipedia.org/wiki/FDMA) (eng. Frequency division multiple access, FDMA) jaetaan ajan sijasta käytettävää taajuusaluetta. Tämä muistuttaa esimerkiksi radio- tai tv-kanavien jakoperustetta, kun kyseessä on radiosignaalia käyttävä lähetys. Tässä jokaiselle lähettäjälle varataan kiinteä taajuusalue (fixed frequency band), joka on vain osa koko kanavan taajuusalueesta. Koska taajuusalue varataan yhdelle lähettäjälle, niin sitä eivät muut voi käyttää sinä aikana kun varaus on voimassa. Näin, jos lähetettävää ei kyseisellä lähettäjällä ole, niin se osa kanavan kapasiteetistä jää käyttämättä, vaikka muilla olisikin lähetettävää.
 
