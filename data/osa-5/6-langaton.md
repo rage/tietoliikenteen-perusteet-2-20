@@ -50,13 +50,13 @@ Langattomista verkoista on tunnistettu kaksi yleistä ongelmatilannetta, jota ku
 
 Kätketyn aseman (engl. hidden terminal) ongelmassa kaksi laitetta yrittää samanaikaisesti viestiä kolmannelle. Nämä kaksi eivät kuitenkaan voi kuulla toistensa viestejä, koska ne eivät ole toistensa kuuluvuusalueella. Tämä voi johtua esimerkiksi maastoesteestä niiden välillä tai siitä, että ne ovat eri puolilla laitetta, jonka kanssa ne yrittävät kommunikoida.
 
-<img src="../img/5-6-katketty-tukiasema.svg" alt="Kuvassa on tukiasema ja kaksi sen kanssa kommunikoivaa laitetta A ja B. Kaikille laiteille on piirretty ympyränä niiden kuuluvuusalue.">
+<img src="../img/5-6-katketty-asema.svg" alt="Kuvassa on tukiasema ja kaksi sen kanssa kommunikoivaa laitetta A ja B. Kaikille laiteille on piirretty ympyränä niiden kuuluvuusalue.">
 
 KUVA. Kuvassa havainnollistettu kätketyn aseman ongelmaa.
 
 Näkyvän aseman (engl. exposed terminal) ongelmassa puolestaan laite kuulee toisen laitteen lähetyssignaalin ja jättää lähettämättä oman signaalinsa, vaikka signaalit eivät vastaanottajien kannalta mene sekaisin. Tällöin asemat ovat toistensa kuuluvuusalueella, mutta viestien vastaanottajat eivät kuulisi toisen aseman viestejä, joten niiden kannalta signaalien sekoittumista ei tapahtuisi.
 
-<img src="../img/5-6-nakyva-tukiasema.svg" alt="Kuvassa on kaksi tukiasemaa ja niiden välissä laitteet A ja B. A kommunikoi oman tukiasemansa kanssa ja B omansa. Tukiasemien kuuluvuus alueet eivät ole päällekkäin, mutta A ja B kuulevat oma tukiasemansa lisäksi myös toisensa.">
+<img src="../img/5-6-nakyva-asema.svg" alt="Kuvassa on kaksi tukiasemaa ja niiden välissä laitteet A ja B. A kommunikoi oman tukiasemansa kanssa ja B omansa. Tukiasemien kuuluvuus alueet eivät ole päällekkäin, mutta A ja B kuulevat oma tukiasemansa lisäksi myös toisensa.">
 
 KUVA. Kuvassa havainnollistettu näkyvän aseman ongelmaa.
 
