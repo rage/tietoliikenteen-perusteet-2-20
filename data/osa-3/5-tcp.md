@@ -36,7 +36,7 @@ TCP pyrkii tukemaan tietoliikenneverkon ja vastaanottajan toimintaa käyttämäl
 
 ## TCP-segmentti
 
-Wikipedian [TCP-sivulla](https://fi.wikipedia.org/wiki/TCP) on kuva TCP-kehyksestä, jota tällä kurssilla kutsutaan segmentiksi sen englanninkielisen nimen segment mukaisesti. En halua käyttää siitä termiä kehys, koska kehys-termiä käytetään kurssilla myöhemmin linkkikerroksen viesteistä. Yritän eri kerrosten eri nimityksillä auttaa kokonaisuuden hallinnassa. Kuten tästäkin esimerkistä huomaat, niin tietoliikenteen termistö ei ole kovinkaan vakiintunutta ja siksi on aina syytä varmistaaa termin merkitys siinä käyttöyhteydessä.
+Wikipedian [TCP-sivulla](https://fi.wikipedia.org/wiki/TCP) on kuva TCP-kehyksestä, jota tällä kurssilla kutsutaan segmentiksi sen englanninkielisen nimen segment mukaisesti. En halua käyttää siitä termiä kehys, koska kehys-termiä käytetään kurssilla myöhemmin linkkikerroksen viesteistä. Yritän eri kerrosten eri nimityksillä auttaa kokonaisuuden hallinnassa. Kuten tästäkin esimerkistä huomaat, niin tietoliikenteen termistö ei ole kovinkaan vakiintunutta ja siksi on aina syytä varmistaa termin merkitys siinä käyttöyhteydessä.
 
 TCP-segmentissä on otsake (engl. header) ja dataosio. Otsakkeen rakenne määritellään tarkasti protokollan kuvauksessa. TCP:n otsakkeen pituus on vähintään 20 tavua eli 160 bittiä tai toisin sanoen viisi 32-bittistä sanaa.  Jotta viestin lähettäjä ja vastaanottaja voivat ymmärtää toisensa oikein on jokaisen bitin (tavun, sanan) merkitys sovittava.
 
@@ -72,7 +72,7 @@ Kun meillä on segmenttejä liikkeellä molempiin suuntiin, niin samassa viestis
 
 <img src="../img/tcp-data-kuittaukset.svg" alt="A lähettää TCPsegmentin (numero 245, pituus 102) B:lle. B lähettää segmentin (no 3546, pituus 200, ack 347) A:lle. A lähettää segmentin (numero puuttuu, pituus 300, ack puuttuu) B:lle. B lähettää 70 tavun mittaisen segmentin, jonka muut tiedot puuttuvat kuvasta. A lähettää vielä kuittauksen, jonka numero puuttuu kuvasta."/>
 
-KUVA: Kuvassa on pieni jakso A:n ja B:n välillä kulkeneest TCP-liikenteestä. Osa viestien numeroista ja kuittausnumeroista on jätetty pois, koska ne täydennetään seuraavassa tehtävässä. Huomaa, että kuvassa ei ole hyödynnetty liukuvaa ikkunaa, kuten normaalisti TCP-liikenteessä olisi.
+KUVA: Kuvassa on pieni jakso A:n ja B:n välillä kulkeneesta TCP-liikenteestä. Osa viestien numeroista ja kuittausnumeroista on jätetty pois, koska ne täydennetään seuraavassa tehtävässä. Huomaa, että kuvassa ei ole hyödynnetty liukuvaa ikkunaa, kuten normaalisti TCP-liikenteessä olisi.
 
 <quiz id="a3a732ab-8252-4618-9a6e-d8556b36bc00"></quiz>
 
