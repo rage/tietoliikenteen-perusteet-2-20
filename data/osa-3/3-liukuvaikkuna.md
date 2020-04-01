@@ -97,7 +97,7 @@ Puskurista muodostuu vastaanottajalle oma 'liukuvan ikkunan' näkymä saapuvien 
 
 Lähettäjän toiminnallisuus:
 * Viesti sovelluskerrokselta: Oletaan, että lähetyspuskuriin mahtuu jonottamaan äärettömän monta viestiä. Jos ikkunassa on tilaa, niin viesti saa järjestysnumeron ja se lähetetään vastaanottajalle. Jos ikkuna on täynnä, niin viesti jää lähetyspuskuriin odottamaan lähetysikkunaan pääsyä.
-* Ajastin laukeaa: Jokaisella viestillä on oma aikaraja ja ne jokainen tarvitsevat siksi oman ajastimen. Ajastimen lauetessa vain kyseinen viesti lähetetään uudelleen. (Huom: jos laitteisto tulee vain yhtä ajastinta laitetasolla, niin sen avulla on kuitenkin mahdollista toteuttaa useita loogisia ajastimia ohjelmallisesti)
+* Ajastin laukeaa: Jokaisella viestillä on oma aikaraja ja ne jokainen tarvitsevat siksi oman ajastimen. Ajastimen lauetessa vain kyseinen viesti lähetetään uudelleen. (Huom: jos laitteisto tukee vain yhtä ajastinta laitetasolla, niin sen avulla on kuitenkin mahdollista toteuttaa useita loogisia ajastimia ohjelmallisesti)
 * Kuittausviesti saapuu: Kun kuittausviesti saapuu, kyseinen viesti merkitään kuitatuksi. Jos tämä on ikkunan reunimmainen, vanhin, viesti, niin siirrä ikkunaa eteenpäin  niin paljon, että ikkunan reunassa on taas ensimmäinen kuittaamaton viesti. Jos ikkunaan mahtuu ja jos lähetysjonossa on lähetettävää, niin lähetä ne yksitellen, kunnes ikkuna on täynnä tai ei enää lähetettävää.
 
 
