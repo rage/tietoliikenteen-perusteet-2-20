@@ -59,7 +59,7 @@ Eri protokollat tai niiden eri versiot käyttävät näitä kaikkia vaihtoehtoja
 
 ##  Järjestysnumero
 
-Protokolla käyttävät viesteissä usein järjestysnumeroa tai tunnistenumeroa, jolla viestit voidaan erottaa toisistaan. Taas protokollan omien tarpeiden mukaan tämän numerointi voi olla vain tunnistamiseen tai myös järjestämiseen.
+Protokollat käyttävät viesteissä usein järjestysnumeroa tai tunnistenumeroa, jolla viestit voidaan erottaa toisistaan. Taas protokollan omien tarpeiden mukaan tämän numerointi voi olla vain tunnistamiseen tai myös järjestämiseen.
 
 Kun numeroa käytetään järjestämiseen, on tärkeää, että numerointi on yhtäjaksoinen, jotta mahdolliset puuttuvat viestit voidaan havaita. Yhtäjaksoisuus ei kuitenkaan aina tarkoita, että viestinumerot olisivat peräkkäisiä kokonaislukuja. Esimerkiksi TCP numeroi viestinsä siten, että kahden peräkkäisen viestin numeroiden erotus on edellisen viestin datan koko tavuina.
 
