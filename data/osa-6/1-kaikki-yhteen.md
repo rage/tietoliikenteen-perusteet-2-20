@@ -42,7 +42,7 @@ Verkkokerros paketoi segmentin omaan IP-datagrammiinsa ja antaa datagrammin link
 
 Verkkokerroksen datagrammissa on vastaanottajan IP-osoite. Koska vastaanottaja ei ole samassa aliverkossa täytyy verkkokerroksen ohjata viesti reititystaulun mukaisesti oletusyhdyskäytävälle. Tämän IP-osoitteen verkkokerros tietää, mutta linkkikerros tarvitsee tätä IP-osoitetta vastaavan MAC-osoitteen. Tämä protokolla määritellään välillä verkkokerrokselle ja välillä linkkikerrokselle kuuluvaksi.
 
-<quiz id="a50903df-836c-422d-95ae-da29218e3448" >    </quiz>
+<quiz id="a50903df-836c-422d-95ae-da29218e3448">  </quiz>
 
 Nyt meillä on tarvittavat tiedot siihen, että linkkikerros voi sijoittaa saamansa IP-datagrammin Ethernet-kehykseen ja lähettää sen paikalliselle yhdyskäytäväreitittimelle.
 
@@ -52,7 +52,7 @@ Yhdyskäytäväreititin vastaanottaa verkkokerroksella sille linkkikerroksen kau
 
 Palvelijalla linkkikerros vastaanottaa tälle laitteelle tulossa olevan viestin ja antaa sen verkkokerrokselle. Verkkokerros tarkistaa, että viesti on nyt perillä oikealla laittella, eli että vastaanotetuss datagrammissa on vastaanottajana tämän laitteen IP-osoite. Verkkokerros antaa viestin kuljetuskerroksen UDP-protokollalle, joka segmentin porttinumeron perusteella osaa antaa viestin edel"leen nimipalveluprosessille.
 
-<quiz "id="abb2ab02-88ba-465d-9d3b-e2f7d709d64b"> </quiz>
+<quiz id="abb2ab02-88ba-465d-9d3b-e2f7d709d64b"> </quiz>
 
 Nimipalveluprosessi selvittää ensin omasta välimuististaan tietääkö se jo valmiiksi vastauksen saamaansa kyselyyn.  Jos pyydettyä tietoa ei ole sen omassa välimuistissa, niin se lähtee kysymään tietoa virallisen nimipalvelijoiden hierarkialta. Ja saatuaan vastauksen lisää sen omaan välimuistiinsa. Oletetaan tässä yksikertaisuuden vuoksi, että tieto löytyy suoraan välimuistista.
 
