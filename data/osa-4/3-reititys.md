@@ -43,7 +43,7 @@ Linkkitila-algoritmi käyttää virittävää puuta reititystaulun muodostamises
 Käydään tässä läpi algoritmin toiminta äskeisessä kuvassa olleen esimerkkiverkon kanssa, kun puun juureksi valitaan solmu A:
 * juuri s= A; S=tyhjä; Q={A,B,C,D,E,F,G}; d[A]=0; d[muut] voivat olla tässä vaiheessa äärettömiä
 * Kierros yksi: u= A; Q={B,C,D.E,F,G} (koska sen etäisyys itseensä on 0 eli lyhin kaikista etäisyyksistä)
-* S={A};  d[B]=3; d[C]=2; previous[B]=A; previous[D]=A
+* S={A};  d[B]=3; d[C]=2; previous[B]=A; previous[C]=A
 * Kierros kaksi: u=C; Q={B,D,E,F,G} {Eli seuraava tarkasteltava on C, koska siihen lyhin etäisyys}
 * S={A,C}; d[D]=2+2=4; d[E]=2+6=8; previous[D]=C; previous[E]=C
 * Kierros kolme: u=B; Q={D,E,F,G} {koska d[B]=3 on pienempi kuin D[D]=4 tai muut etäisyydet}
@@ -136,7 +136,7 @@ Hyvien uutisten kanssa tieto eteni viestien mukana aina laajemmalle. Huonojen uu
 
 Tämä nimenomainen ongelma voidaan korjata sillä, että solmu 'valehtelee' tietylle naapurille oman etäisyytensä äärettömäksi niihin solmuihin, jotka se reitittää kyseisen naapurin kautta. Näin solmu itse asiassa lähettää erilaiset etäisyysvektorit eri naapureilleen. Äskeisessä esimerkissä alkutilanteessa B lähettää A:lle vektorin B: (A 4, B 0, C 2), mutta C:lle vektorin (A -, B 0, C 2), koska se lähettää viestit A:lle C:n kautta. C lähettää saman vektorin sekä A:lle että B:lle, koska se ei reititä viestejä kummankaan kautta. Tällaista solmun tarkoituksellista valehtelua reitityssuuntaan kutsutaan englanniksi termillä poison-reverse.
 
-Vaikka saimme tällä pienellä muutoksella katkaistua tässä esimerkissä tuon huonojen uutisten hitaan etenemisen, niin se ei ratkaise  kaikkia ongelmatilanteita.  (Esimerkiksi, jos otamme tähän kolmen solmun järjestelmään mukaan solmun D, jolla on yhteys vain solmuun B. Kn solmu D myöhemmin katoaa kokonaan verkosta A ja C aloittavat äskeistä esimerkkiä vastaavan pallottelun siitä mitä kautta ne D:n voivat tavoittaa. Koska kumpikin on lähettänyt viestit D:lle suoraan B:n kautta, niin tuon paluusuunnan asettaminen äärettömäksi ei auta.)
+Vaikka saimme tällä pienellä muutoksella katkaistua tässä esimerkissä tuon huonojen uutisten hitaan etenemisen, niin se ei ratkaise  kaikkia ongelmatilanteita.  (Esimerkiksi, jos otamme tähän kolmen solmun järjestelmään mukaan solmun D, jolla on yhteys vain solmuun B. Kun solmu D myöhemmin katoaa kokonaan verkosta A ja C aloittavat äskeistä esimerkkiä vastaavan pallottelun siitä mitä kautta ne D:n voivat tavoittaa. Koska kumpikin on lähettänyt viestit D:lle suoraan B:n kautta, niin tuon paluusuunnan asettaminen äärettömäksi ei auta.)
 
 
 
