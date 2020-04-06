@@ -11,7 +11,7 @@ Tämän Kurssin ensimmäisen version tekoon keväällä 2020 ovat osallistuneet 
 lisäksi kurssin opettaja Terho Uotila. Erityisesti hänelle kuuluu kiitos siitä, että teksti on helpommin 
 ymmärrettävää ja että tässä versiossa on tekstin lisäksi suhteellisen paljon kuvia.
 
-Kiitos myös kevään 2020 opiskelijoille, jotka ovat antaneet palautetta ja esittäneet korjauksia tekstiin ja tehtäviin: Akira Taguchi, Annukka Närhi, Tuomas Valkonen, Tuomas Konttinen. Näiden lisäksi myös githubin käyttäjätunnus tuomasmk on tehtyn korjauksia tekstiin. Lisäksi kiitos laajalle joukolle aktiivisesti telegramissa keskusteluun osallistuneille, joidet nimet jäävät usein tunnusten taakse piiloon.
+Kiitos myös kevään 2020 opiskelijoille, jotka ovat antaneet palautetta ja esittäneet korjauksia tekstiin ja tehtäviin: Akira Taguchi, Annukka Närhi, Tuomas Valkonen, Tuomas Konttinen. Näiden lisäksi myös githubin käyttäjätunnukset tuomasmk ja msaari102 ovat tehneet korjauksia tekstiin. Lisäksi kiitos laajalle joukolle aktiivisesti telegramissa keskusteluun osallistuneille, joidet nimet jäävät usein tunnusten taakse piiloon.
 
 
 ## Materiaalin lisenssi
