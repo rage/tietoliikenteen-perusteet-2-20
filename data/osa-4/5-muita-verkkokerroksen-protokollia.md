@@ -64,7 +64,7 @@ Palataan vielä hetkeksi virtuaalisten yksityisverkkojen teemaan. Virtuaalinen y
 KUVA: Kuvassa kaksi aliverkkoa on yhdistetty virtuaaliseksi yksityisverkoksi. Näitä verkkoja yhdistävät reitittimet toimivat yhteistyössä ja tunneloivat kaikki aliverkosta A lähtevät viestit aliverkkoon B.
 
 
-<quiz id="https://quizzes.mooc.fi/quizzes/a9c31430-872f-4bed-8a59-e068b807198f"> </quiz>
+<quiz id="a9c31430-872f-4bed-8a59-e068b807198f"> </quiz>
 
 Jos et saanut äskeistä tehtävää oikein, niin piirrä itsellesi alkuperäinen laitteen lähettämä IP-paketti ja sen jälkeen reitittimen lähettämä IP-sec paketti ja katso miten nuo lähettäjien ja vastaanottajien osoitteet menevät.
 
