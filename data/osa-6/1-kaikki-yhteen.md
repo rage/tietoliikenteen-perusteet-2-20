@@ -76,4 +76,4 @@ Nyt vihdoin palvelimelta tuleva hTTP-vastaus on asiakkaalla ja protokollapino vo
 
 Tästä kuvauksesta jäi vielä pois kaikki otsakkeiden yksityiskohdat. Jos tuntuu, että ne eivät vielä ole täysin hallinnassa, niin kannattaa kerrata näiden protokollien toimintaa ja erityisesti otsakkeiden tietoja.
 
-<quiz id="  "> </quiz>
+<quiz id="b85e990f-92d1-4a28-aa3f-f3b800c996cf"> </quiz>
