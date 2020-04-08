@@ -29,7 +29,7 @@ Jotta sovelluskerroksella muodostetty pyyntö voidaan välittää verkkoon, niin
 
 Kun tietokone on liittynyt verkkoon, se on valmiina lähettämään ja vastaanottamaan viestejä.
 
-Seuraavaksi käyttäjä käynnistää www-selaimen ja kirjoittaa osoitekenttään sen www-palvelimen nimen, jonka pääsivun käyttäjä haluaa hakea. Oletamme tässä että kyseisen palvelimen nimi on www.verkkotunnus.fi   (Tämä osoite vie itseasiassa Traficomin sivulle, joten tunnus on aidosti olemassa.)
+Seuraavaksi käyttäjä käynnistää www-selaimen ja kirjoittaa osoitekenttään sen www-palvelimen nimen, jonka pääsivun käyttäjä haluaa hakea. Oletamme tässä, että kyseisen palvelimen nimi on www.verkkotunnus.fi   (Tämä osoite vie itseasiassa Traficomin sivulle, joten tunnus on aidosti olemassa.)
 
 Selain siis lähtee seuraavaksi hakemaan kyseistä www-sivua.
 
@@ -37,10 +37,10 @@ Selain siis lähtee seuraavaksi hakemaan kyseistä www-sivua.
 
 Selaimen pitää muodostaa HTTP-pyyntö, mutta ennen sitä sen täytyy selvittää kyseistä verkkonimeä www.verkkotunnus.fi vastaava IP-osoite.
 
-Niinpä selain tekee pyynnön nimipalvelijalle, joka osoitteen se on jo saanut aiemmin. Sovelluskerrokselta nimipalvelukysely siirtyy kuljetuskerrokselle. Nimipalvelupyyntö käyttää UDP:tä kuljetuskerroksen protokollana, joten erillistä yhteydenmuodostusta ei tehdä.  Kuljetuskerros muodostaa pyynnöstä segementin ja antaa sen edelleen verkkokerrokselle välitettäväksi eteenpäin.
+Niinpä selain tekee pyynnön nimipalvelijalle, jonka osoitteen se on jo saanut aiemmin. Sovelluskerrokselta nimipalvelukysely siirtyy kuljetuskerrokselle. Nimipalvelupyyntö käyttää UDP:tä kuljetuskerroksen protokollana, joten erillistä yhteydenmuodostusta ei tehdä.  Kuljetuskerros muodostaa pyynnöstä segementin ja antaa sen edelleen verkkokerrokselle välitettäväksi eteenpäin.
 Verkkokerros paketoi segmentin omaan IP-datagrammiinsa ja antaa datagrammin linkkikerrokselle.
 
-Verkkokerroksen datagrammissa on vastaanottajan IP-osoite. Koska vastaanottaja ei ole samassa aliverkossa täytyy verkkokerroksen ohjata viesti reititystaulun mukaisesti oletusyhdyskäytävälle. Tämän IP-osoitteen verkkokerros tietää, mutta linkkikerros tarvitsee tätä IP-osoitetta vastaavan MAC-osoitteen. Tämä protokolla määritellään välillä verkkokerrokselle ja välillä linkkikerrokselle kuuluvaksi.
+Verkkokerroksen datagrammissa on vastaanottajan IP-osoite. Koska vastaanottaja ei ole samassa aliverkossa täytyy verkkokerroksen ohjata viesti reititystaulun mukaisesti oletusyhdyskäytävälle. Oletusyhdyskäytävän IP-osoitteen laite on saanut verkkoon liittyessän. Näin ollen verkkokerros tietää sen, mutta linkkikerros tarvitsee IP-osoitetta vastaavan MAC-osoitteen. Joten ennenkuin verkkokerroksen datagrammi / IP-paketti voidaan sijoittaa linkkikerroksen kehykseen täytyy tuo MAC-osoite selvittää. IP-osoitteen perusteella MAC-osoitteen selvittävä protokolla määritellään välillä verkkokerrokselle ja välillä linkkikerrokselle kuuluvaksi.
 
 <quiz id="a50903df-836c-422d-95ae-da29218e3448">  </quiz>
 
@@ -48,13 +48,21 @@ Nyt meillä on tarvittavat tiedot siihen, että linkkikerros voi sijoittaa saama
 
 Muistathan vielä, että kehyksen sisällä olevan datagrammin sisällä olevassa UDP-segmentissä on paikalliselle nimipalvelijalle menossa oleva kysely.
 
-Yhdyskäytäväreititin vastaanottaa verkkokerroksella sille linkkikerroksen kautta ohjatun nimipalvelukysely. Se tarkistaa datagrammista mihin osoitteeseen viesti on menossa ja välittää sen reititystaulunsa tietojen perusteella eteenpäin. Näin viesti liikkuu reitittimeltä toiselle, kunnes se saapuu nimipalvelijan kanssa samassa aliverkossa olevalle reitittimelle. Tämä reititin ohjaa viestin palveiljalle.
+Nyt asiakaskone lähettää kehyksen verkkoon, josta se päätyy vastaanottajan MAC-osoitteen perusteella yhdyskäytäväreitittimelle.
 
-Palvelijalla linkkikerros vastaanottaa tälle laitteelle tulossa olevan viestin ja antaa sen verkkokerrokselle. Verkkokerros tarkistaa, että viesti on nyt perillä oikealla laittella, eli että vastaanotetuss datagrammissa on vastaanottajana tämän laitteen IP-osoite. Verkkokerros antaa viestin kuljetuskerroksen UDP-protokollalle, joka segmentin porttinumeron perusteella osaa antaa viestin edel"leen nimipalveluprosessille.
+Yhdyskäytäväreititin vastaanottaa verkkokerroksella sille linkkikerroksen kautta ohjatun nimipalvelukysely. Se tarkistaa datagrammista, mikä on vastaanottajan IP-osoite eli minne viesti on menossa ja välittää sen reititystaulunsa tietojen perusteella eteenpäin. Näin viesti liikkuu reitittimeltä toiselle, kunnes se saapuu nimipalvelijan kanssa samassa aliverkossa olevalle reitittimelle. Tämä reititin ohjaa viestin nimipalvelijalle.
+
+Nimipalvelijalla linkkikerros vastaanottaa tälle laitteelle (=kehyksen vastaanottana on laitteen MAC-osoite) tulossa olevan viestin ja antaa sen verkkokerrokselle. Verkkokerros tarkistaa, että viesti on nyt perillä oikealla laitteella, eli että vastaanotetussa datagrammissa on vastaanottajana tämän laitteen IP-osoite. Verkkokerros antaa viestin kuljetuskerroksen UDP-protokollalle, joka segmentin porttinumeron perusteella osaa antaa viestin edelleen nimipalveluprosessille.
 
 <quiz id="abb2ab02-88ba-465d-9d3b-e2f7d709d64b"> </quiz>
 
-Nimipalveluprosessi selvittää ensin omasta välimuististaan tietääkö se jo valmiiksi vastauksen saamaansa kyselyyn.  Jos pyydettyä tietoa ei ole sen omassa välimuistissa, niin se lähtee kysymään tietoa virallisen nimipalvelijoiden hierarkialta. Ja saatuaan vastauksen lisää sen omaan välimuistiinsa. Oletetaan tässä yksikertaisuuden vuoksi, että tieto löytyy suoraan välimuistista.
+Nimipalveluprosessi selvittää ensin omasta välimuististaan tietääkö se jo valmiiksi vastauksen saamaansa kyselyyn.  Jos pyydettyä tietoa ei ole sen omassa välimuistissa, niin se lähtee kysymään tietoa virallisten nimipalvelijoiden hierarkialta. Ja saatuaan vastauksen lisää sen omaan välimuistiinsa. Oletetaan tässä yksinkertaisuuden vuoksi, että tieto löytyy suoraan välimuistista.
+
+Nimipalvelija muodostaa niin nimipalveluprotokollan mukaisen viestin ja sijoittaa viestin vastauskentään tarvittavat nimipalvelutietueet. Sen jälkeen sovelluskerros antaa nimipaveluviestin kuljetuskerrokselle, jossa se sijoitetaan UDP-segmentin sisään ja annetaan verkkokerrokselle. Koska kyseessä on vastaus aiempaan viestiin, niin lähettäjällä (=tämä paikallinen nimipalvelija) on jo tiedossaan vastaanottajan (=alkuperäinen kysyjä) IP-osoite ja porttinumero. Ne tulivat kyselyn mukana otsakekentissä. Nyt lähettäjän ja vastaanottajan porttinumerot sijoitetan UDP-segmentin otsakkeeseen, jonka verkkokerros sijoittaa omaan IP-datagrammiinsa. Datagramissa on vastaavasti lähettäjän (=tämä nimipavelija) ja vastaanottajan (=alkuperäinen kysyjä) IP-osoitteet. Datagrammi etenee sitten seuraavaksi linkkikerrokselle, joka sijoittaa sen omaan kehykseensä. Linkkikerroksella tämän kehyksen vastaanottajana on nimipalvelijan aliverkon reitittimen MAC-osoite.
+
+Ja näin vastaus viesti pääsee liikkelle ja etenee kuten kaikki muutkin viesti reititin kerrallaan vastaanottajalle, jossa taas protokollapinoa pitkin sovelluskerroksen nimipalvelukirjastolle ja sitä kautta tieto päätyy selaimelle.
 
 ## Itse kysely
+
+Nyt selaimella on vihdoin tarvittavat tiedot, jotta se voi jo mahdollisesti hetki sitten muotoilemansa HTTP-viestin kohdistaa oikealle vastaanottajalla ja antaa sen kuljetuskerrokselle välitettäväksi eteenpäin.
 
