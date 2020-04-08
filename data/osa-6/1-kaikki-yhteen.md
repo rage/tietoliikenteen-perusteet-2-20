@@ -35,7 +35,7 @@ Selain siis lähtee seuraavaksi hakemaan kyseistä www-sivua.
 
 ## Kyselyn alussa tietojen selvittäminen
 
-Selaimen pitää muodostaa HTTP-pyyntö, mutta ennen sitä sen täytyy selvittää kyseistä verkkonimeä www.verkkotunnus.fi vastaava IP-osoite.
+Selaimen pitää muodostaa HTTP-pyyntö, mutta ennen kuin se saa pyynnön valmiiksi lähetystä varten, sen täytyy selvittää kyseistä verkkonimeä www.verkkotunnus.fi vastaava IP-osoite.
 
 Niinpä selain tekee pyynnön nimipalvelijalle, jonka osoitteen se on jo saanut aiemmin. Sovelluskerrokselta nimipalvelukysely siirtyy kuljetuskerrokselle. Nimipalvelupyyntö käyttää UDP:tä kuljetuskerroksen protokollana, joten erillistä yhteydenmuodostusta ei tehdä.  Kuljetuskerros muodostaa pyynnöstä segementin ja antaa sen edelleen verkkokerrokselle välitettäväksi eteenpäin.
 Verkkokerros paketoi segmentin omaan IP-datagrammiinsa ja antaa datagrammin linkkikerrokselle.
@@ -64,5 +64,9 @@ Ja näin vastaus viesti pääsee liikkelle ja etenee kuten kaikki muutkin viesti
 
 ## Itse kysely
 
-Nyt selaimella on vihdoin tarvittavat tiedot, jotta se voi jo mahdollisesti hetki sitten muotoilemansa HTTP-viestin kohdistaa oikealle vastaanottajalla ja antaa sen kuljetuskerrokselle välitettäväksi eteenpäin.
+Nyt selaimella on vihdoin tarvittavat tiedot, jotta se voi viimeistellä HTTP-pyynnön. Se tietää nyt mille laitteelle kysely pitää kohdistaa. Selain voi siis avata pistokkeen ja avamisen jälkeen sijoittaa pyynnön tähän pistokkeeseen, josta kuljetuskerros saa sen välitettäväksi eteenpäin.
+
+Koska HTTP-protokolla käyttää TCP:tä kuljetuskerroksen palveluna, avaa TCP yhteyden vastaanottajaan jo pistokkeen luonnin yhteydessä. Siinä vaiheessa tehdään TCP:n SYN-ACK -kättely ja avataan yhteys, jota pitkin sitten myöhemmin sovelluskerroksen viestit voivat kulkea molempiin suuntiin. Asiakas siis aloittaa kättelyn siinä vaiheessa, kun selain suorittaa pistokkeen avaamiseen liittyvän kirjastofunktion. Osana funktion suoritusta kuljetuskerroksen TCP lähettää SYN-segmentin vastaanottajalle ja saa aikanaan SYNACK viestin vastauksena.  Tähän pitää asiakkaan vielä vastata ACK-kuittauksella, mutta TCP protokolla sallii kuittauksen kulkevan varsinaisen datasegmentin mukana, joten yhteydenmuodostuksen kolmivaiheisen kättelyn viimeinen kuittaus voidaan lähettää varsinaisen HTTP-pyynnön mukana.
+
+Seuraavana on vihdoin vuorossa varsinaisen HTTP-pyynnön lähettäminen. Sovellus siis kirjoittaa sen pistokkeeseen, kun pistoke on ensin avattu. Kuljetuskerros saa pyynnön pistokkeesta ja muodostaa siitä segmentin. Yleensä HTTP-pyyntö mahtuu yhteen segmenttiin. Viesti kulkee sitten verkkokerroksen, linkkikerroksen ja verkon reitittimien välityksessä www-palvelimelle.
 
