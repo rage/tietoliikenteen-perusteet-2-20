@@ -70,3 +70,10 @@ Koska HTTP-protokolla käyttää TCP:tä kuljetuskerroksen palveluna, avaa TCP y
 
 Seuraavana on vihdoin vuorossa varsinaisen HTTP-pyynnön lähettäminen. Sovellus siis kirjoittaa sen pistokkeeseen, kun pistoke on ensin avattu. Kuljetuskerros saa pyynnön pistokkeesta ja muodostaa siitä segmentin. Yleensä HTTP-pyyntö mahtuu yhteen segmenttiin. Viesti kulkee sitten verkkokerroksen, linkkikerroksen ja verkon reitittimien välityksessä www-palvelimelle.
 
+Palvelimella pyyntö kulkee protokollapino pitkin sovelluskerrokselle, jossa www-palvelinsovellus saa sen pistokkeen kautta käyttöönsä. Nyt palvelinsovellus analysoi pyynnön ja muodostaa vastauksen, jonka se sitten lähettää vastauksena asiakkaalle.  Koska vastaus saattaa olla hyvin suuri html-sivu, niin se ei enää välttämättä mahdu yhteen kuljetuskerroksen segmenttiin. Siinä tapauksessa kuljetuskeros jakaa sovelluskerroksen viestin useampaan segmenttiin. Itse asiassa TCP ei tunnista sovelluskerroksen viestien rajoja, joten sen ei tarvitse välittää siitä miten se pistokkeesta tulevan tavuvirran pilkkoo palasiksi. 
+
+Nyt vihdoin palvelimelta tuleva hTTP-vastaus on asiakkaalla ja protokollapino voi välittää sen sovelluskerrolla toimivalla selaimelle. Kaiken tämän jälkeen selain vihdoin voi sivun kuvauksen mukaisesti näyttää sivun käyttäjälle. Sivulla voi olla lisäelementtejä, joita sovellus lähtee pyytämään seuraavaksi elementti kerrallaan. Elementit voivat tulla muilta palvelimilta, jolloin niille tehtäviin HTTP-pyyntöihin saatetaan tarvita ensin nimipalvelupyyntöä palvelimen IP-osoitteen selvittämiseen.
+
+Tästä kuvauksesta jäi vielä pois kaikki otsakkeiden yksityiskohdat. Jos tuntuu, että ne eivät vielä ole täysin hallinnassa, niin kannattaa kerrata näiden protokollien toimintaa ja erityisesti otsakkeiden tietoja.
+
+<quiz id="  "> </quiz>
