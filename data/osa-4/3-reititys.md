@@ -46,10 +46,10 @@ Käydään tässä läpi algoritmin toiminta äskeisessä kuvassa olleen esimerk
 * S={A};  d[B]=3; d[C]=2; previous[B]=A; previous[C]=A
 * Kierros kaksi: u=C; Q={B,D,E,F,G} {Eli seuraava tarkasteltava on C, koska siihen lyhin etäisyys}
 * S={A,C}; d[D]=2+2=4; d[E]=2+6=8; previous[D]=C; previous[E]=C
-* Kierros kolme: u=B; Q={D,E,F,G} {koska d[B]=3 on pienempi kuin D[D]=4 tai muut etäisyydet}
+* Kierros kolme: u=B; Q={D,E,F,G} {koska d[B]=3 on pienempi kuin d[D]=4 tai muut etäisyydet}
 * S={A,C,B}; (d[D] pysyy arvossa 4, koska 4 < 3+5)
 * Kierros neljä: u=D; Q={E,F,G}
-* S={A,C,B,D}; d[B] pysyy ennallaan; d[F]=4+2=6; pevious[F]=D
+* S={A,C,B,D}; d[B] pysyy ennallaan; d[F]=4+2=6; previous[F]=D
 * Kierros viisi: u=F; Q={E,G}   (koska d[F]<d[E])
 * S={A,B,C,D,F}; d[E] pysyy ennallaan 8 < 10; d[G]=6+1=7, previous[G]=F
 * Kierros kuusi: u=G; Q={E} (koska d[G]<d[E], jos yhtäsuuret, niin valitaan jompikumpi ilman tarkempaa sääntöä)
