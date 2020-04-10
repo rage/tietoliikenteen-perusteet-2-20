@@ -16,7 +16,7 @@ hidden: false
 
 ## Muita verkkokerroksen protokollia
 
-Edellä on käyty läpi verkkokerroksen tärkeimmän protokollan IP:n toiminnallisuutta. Verkkokerroksella on kuitenkin paljon muitakin protokollia. Englanninkielinen wikipedian sivu [Network_layer](https://en.wikipedia.org/wiki/Network_layer) luettelee niitä toistakymmentä. Tällä kurssilla tutustutaan niistä hyvin lyhyesti vain kahteen, jotka ovat vahvasti liitoksissa IP-protokollan kanssa. Kummankaan protokollan yksityiskohtaista toimitaa emme käy läpi. Se jää myöhemmille kursseille.
+Edellä on käyty läpi verkkokerroksen tärkeimmän protokollan IP:n toiminnallisuutta. Verkkokerroksella on kuitenkin paljon muitakin protokollia. Englanninkielinen wikipedian sivu [Network_layer](https://en.wikipedia.org/wiki/Network_layer) luettelee niitä toistakymmentä. Tällä kurssilla tutustutaan niistä hyvin lyhyesti vain kahteen, jotka ovat vahvasti liitoksissa IP-protokollan kanssa. Kummankaan protokollan yksityiskohtaista toimintaa emme käy läpi. Se jää myöhemmille kursseille.
 
 
 ## ICMP
