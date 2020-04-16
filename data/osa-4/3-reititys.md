@@ -54,7 +54,7 @@ Käydään tässä läpi algoritmin toiminta äskeisessä kuvassa olleen esimerk
 * S={A,B,C,D,F}; d[E] pysyy ennallaan 8 < 10; d[G]=6+1=7, previous[G]=F
 * Kierros kuusi: u=G; Q={E} (koska d[G]<d[E], jos yhtäsuuret, niin valitaan jompikumpi ilman tarkempaa sääntöä)
 * S={A,B,C,D,F,G}; d[E] pysyy ennallaan
-* Kierroksella seitsemän käsitellään viimeinen solmu G, mutta se ei aiheuta muutoksia tauluihin d tai previous
+* Kierroksella seitsemän käsitellään viimeinen solmu E, mutta se ei aiheuta muutoksia tauluihin d tai previous
 *
 
 Algoritmin jälkeen meillä on etäisyydet d(A)=0; d(B)=3; d(C)=2; d(D)=4, d(E)=8, d(F)=6 sekä d(G)=7 ja previous(B)=A, previous(C)=A; previous(D)=C, previous(E)=C, previous(F)=D ja previous(G)=F. Simuloidessa tuon previous-taulun sijaan voin myös merkitä verkkopiirrokseen vastaavan linkin (kuten wikipedian kuvassa on tehty) Näistä voidaan sitten laatia reititystaulu A:lle
