@@ -70,7 +70,7 @@ Kun reititin saa linkistä paketin, niin sen täytyy päättää mihin linkkiin 
 
 Tässä reititystaulussa on useita kenttiä. Ensimmäisenä on kohdeverkko (network destination) ja siihen liittyvä verkonpeite (netmask). Näillä yhdessä voidaan tunnistaa IP-paketin vastaanottajan osoitteen perusteella verkko, johon paketti pitää tältä laitteelta toimittaa. Huomaa, että kyseinen verkko ei välttämättä ole vastaanottajan oma verkko, vaan lähinnä suunta, johon tältä laitteelta tuohon osoitteeseen menevät viestit pitää lähettää. Yhdyskäytävä (gateway) kertoo siis "laitteen", jonka kautta kyseisen verkon voi saavuttaa. Rajapinta (interface) auttaa tunnistamaan paikallisen linkin, verkkokortin tai muun paikallinen rajapinnnan, jonka kautta liikenne yhdyskäytävälle kulkee. Viimeinen kenttä kustannus (metric) auttaa valitsemaan useammasta mahdollisesti vaihtoehdosta kustannusten kannalta parhaimman.
 
-Koska tämä reititystaulu on kotiverkon laitteesta, niin siinä näkyy laitteen oma paikallinen, laitteen sisäinen osoite, 127.0.0.1 sekä laitteen oma IP-numero 192.168.0.100, jolla tunnistetaan laitteen oma verkkokortti. Lisäksi tästä reititystaulusta löytyy oletusyhdyskäytävän osoite 192.169.0.1, joka on kotiverkon NAT-reitittimen osoite.
+Koska tämä reititystaulu on kotiverkon laitteesta, niin siinä näkyy laitteen oma paikallinen, laitteen sisäinen osoite, 127.0.0.1 sekä laitteen oma IP-numero 192.168.0.100, jolla tunnistetaan laitteen oma verkkokortti. Lisäksi tästä reititystaulusta löytyy oletusyhdyskäytävän osoite 192.168.0.1, joka on kotiverkon NAT-reitittimen osoite.
 
 Kuten huomaat, niin tässä reititystaulussa on varsin paljon rivejä. Jos voisimme katsoa internetin syövereissä olevan reitittimen reititystaulua, niin siinä näitä rivejä olisi paljon enemmän.
 
