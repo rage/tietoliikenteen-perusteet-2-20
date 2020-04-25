@@ -72,7 +72,7 @@ Poimin tähän sattumanvaraisesti kahden eri valmistajan esitteet. Ciscolta on m
 
 Molemmissa esitteissä esiintyy lyhenne PoE. Aukikirjoitettuna se on [Power-over-Ethernet](https://fi.wikipedia.org/wiki/Power_over_Ethernet) eli tietokoneen tai muun verkkolaitteen tarvitsema sähkövirta voidaan toimittaa suoraan laitteet yhdistävässä ethernet-kaapelissa eikä erillistä virtajohtoa tarvita.
 
-Laitteissa puhutaan myös kerrosten 2 ja 3 kytkimistä (engl. Layer 2 and Layer 3 switch). Nämä viittaavat protokollapinoon siten että kerros 2 on linkkikerrosja kerros 3 verkkokerros. Käytännössä tuollainen kerroksen 3 kytkin on reititin, jossa reitityspäätöksiä tehdään ohjelmiston sijasta laitteistolla. Jos asia kiinnostaa, niin lue lisää englanninkielisestä wikipedian artikkelista [Multilayer switch](https://en.wikipedia.org/wiki/Multilayer_switch).
+Laitteissa puhutaan myös kerrosten 2 ja 3 kytkimistä (engl. Layer 2 and Layer 3 switch). Nämä viittaavat protokollapinoon siten että kerros 2 on linkkikerros ja kerros 3 verkkokerros. Käytännössä tuollainen kerroksen 3 kytkin on reititin, jossa reitityspäätöksiä tehdään ohjelmiston sijasta laitteistolla. Jos asia kiinnostaa, niin lue lisää englanninkielisestä wikipedian artikkelista [Multilayer switch](https://en.wikipedia.org/wiki/Multilayer_switch).
 
 <quiz id="b6e7f93c-91a7-44f7-a66e-f1c8c92e255a"> </quiz>
 
