@@ -36,12 +36,12 @@ Reitityspäätöksen yhteydessä myös paketin IP-otsakkeen tarvittavat kentät 
 
 Kun sisääntulossa tiedetään mihin ulosmenoon paketti pitää ohjata se voidaan antaa arkkitehtuurille siirrettäväksi oikeaan ulosmenoon. Tässä vaiheessa paketti saattaa joutua hetken jonottamaan, jos esimerkiksi joku toinen paketti on juuri siirrossa samaan ulosmenoon tai arkkitehtuurissa ei muuten ole vapaata reittiä paketin siirtämiseksi.
 
-Reitittimien suurin haaste ei ole pakettien välitys sinänsä vaan se, että pakettien välitykseen ei saisi kulua juurikaan aikaa. Jotta gigabitin reititin pystyy välittämään liikennettä tällä nopeudella se ei voi käyttää montaakaan nanosekuntia yhden paketin välittämiseen sisääntulon ulkoreunalta ulosmenon ulkoreunalle. Jos jos paketti ei joudu jonottamaan, niin sen pitää päästä reitittimen läpi muutamassa nanosekunnissa. Jos tämän prosessointiviive on paljon suurempi, niin silloin reititin ei pystykään välittämään liikennettä halutulla nopeudella. Hitaammalla nopeudella reitittimellä on enemmän aikaa paketin käsittelyyn ennenkuin seuraava paketti jo saapuu. Prosessointiviiveen päälle tulevat sitten mahdolliset jonotuksen aiheuttamat jonotusviiveet.
+Reitittimien suurin haaste ei ole pakettien välitys sinänsä vaan se, että pakettien välitykseen ei saisi kulua juurikaan aikaa. Jotta gigabitin reititin pystyy välittämään liikennettä tällä nopeudella se ei voi käyttää montaakaan nanosekuntia yhden paketin välittämiseen sisääntulon ulkoreunalta ulosmenon ulkoreunalle. Jos paketti ei joudu jonottamaan, niin sen pitää päästä reitittimen läpi muutamassa nanosekunnissa. Jos tämän prosessointiviive on paljon suurempi, niin silloin reititin ei pystykään välittämään liikennettä halutulla nopeudella. Hitaammalla nopeudella reitittimellä on enemmän aikaa paketin käsittelyyn ennenkuin seuraava paketti jo saapuu. Prosessointiviiveen päälle tulevat sitten mahdolliset jonotuksen aiheuttamat jonotusviiveet.
 
 
 ## Ulosmeno
 
-Ulosmeno huolehtii sitten saapuneen paketin lähettämistä seuraavaan linkkiin. Kun paketti on päätynyt reittimen sisällä tänne asti sille tehdään vastaavia operaatioita kuin sisääntulossa, mutta päinvastaisessa järjestyksessä. Koska sisääntulossa on jo IP-paketin otsaketiedot päivitetty, niin täällä IP-paketti sijoitetaan linkkikerroksen kehyksen sisään. Tämän uuden kehyksen otsaketiedot päivitetään ja kun linkki on vapaa kehys lähetetään sinne. Koska linkki ei aina on heti vapaa, paketti voi joutua jonottamaan myös ulosmenossa kunnes linkki vapautuu.
+Ulosmeno huolehtii sitten saapuneen paketin lähettämistä seuraavaan linkkiin. Kun paketti on päätynyt reittimen sisällä tänne asti sille tehdään vastaavia operaatioita kuin sisääntulossa, mutta päinvastaisessa järjestyksessä. Koska sisääntulossa on jo IP-paketin otsaketiedot päivitetty, niin täällä IP-paketti sijoitetaan linkkikerroksen kehyksen sisään. Tämän uuden kehyksen otsaketiedot päivitetään ja kun linkki on vapaa, kehys lähetetään sinne. Koska linkki ei aina ole heti vapaa, paketti voi joutua jonottamaan myös ulosmenossa kunnes linkki vapautuu.
 
 
 
@@ -72,7 +72,7 @@ Poimin tähän sattumanvaraisesti kahden eri valmistajan esitteet. Ciscolta on m
 
 Molemmissa esitteissä esiintyy lyhenne PoE. Aukikirjoitettuna se on [Power-over-Ethernet](https://fi.wikipedia.org/wiki/Power_over_Ethernet) eli tietokoneen tai muun verkkolaitteen tarvitsema sähkövirta voidaan toimittaa suoraan laitteet yhdistävässä ethernet-kaapelissa eikä erillistä virtajohtoa tarvita.
 
-Laitteissa puhutaan myös kerrosten 2 ja 3 kytkimistä (engl. Layer 2 and Layer 3 switch). Nämä viittaavat protokollapinoon siten että kerros 2 on linkkikerrosja kerros 3 verkkokerros. Käytännössä tuollainen kerroksen 3 kytkin on reititin, jossa reitityspäätöksiä tehdään ohjelmiston sijasta laitteistolla. Jos asia kiinnostaa, niin lue lisää englanninkielisestä wikipedian artikkelista [Multilayer switch](https://en.wikipedia.org/wiki/Multilayer_switch).
+Laitteissa puhutaan myös kerrosten 2 ja 3 kytkimistä (engl. Layer 2 and Layer 3 switch). Nämä viittaavat protokollapinoon siten että kerros 2 on linkkikerros ja kerros 3 verkkokerros. Käytännössä tuollainen kerroksen 3 kytkin on reititin, jossa reitityspäätöksiä tehdään ohjelmiston sijasta laitteistolla. Jos asia kiinnostaa, niin lue lisää englanninkielisestä wikipedian artikkelista [Multilayer switch](https://en.wikipedia.org/wiki/Multilayer_switch).
 
 <quiz id="b6e7f93c-91a7-44f7-a66e-f1c8c92e255a"> </quiz>
 
