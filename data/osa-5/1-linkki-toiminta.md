@@ -23,7 +23,7 @@ Linkkikerros huolehtii viestin välityksestä vain samassa aliverkossa olevien l
 
 Yhdessä aliverkossa olevat laitteet voivat havaita muiden saman aliverkon laitteiden lähettämän liikenteen, joten ne voivat suoraan vastaanottaa toisen laitteen lähettämän signaalin. Yhdessä aliverkossa on käytännössä vähintään kaksi laitetta, mutta laitteita voi olla useampiakin. Samaan aliverkkoon liitettävien laitteiden maksimimäärä riippuu käytettävästä verkkotekniikasta ja [verkon topologiasta](https://fi.wikipedia.org/wiki/Verkkotopologia). Esimerkiksi tähtiverkossa kytkimen porttien lukumäärä rajoittaa siihen liitettävien laitteiden lukumäärää. Väyläverkossa taas laitteiden fyysinen etäisyys tai oikeammin signaalin kulkuaika päästä päähän rajoittaa aliverkon kokoa. Renkaassa puolestaan rajoitteeksi tulee yhteen kierrokseen kuluva aika.
 
-Wikipediassa on hyvä kuva erilaista topologioista: [https://fi.wikipedia.org/wiki/Tiedosto:Verkkotopologiat.png](https://fi.wikipedia.org/wiki/Tiedosto:Verkkotopologiat.png") 
+Wikipediassa on hyvä kuva erilaista topologioista: [https://fi.wikipedia.org/wiki/Tiedosto:Verkkotopologiat.png](https://fi.wikipedia.org/wiki/Tiedosto:Verkkotopologiat.png) 
 
 * Väylässä laitteet littyvät vuorotellen samaan yhteen fyysiseen kaapeliin. Väylä on kuin jana, jolla on alkupiste ja loppupiste ja siinä välissä laitteita kiinni erikohdissa tätä janaa. Väylän laitteet voivat suoraan kommunikoida kaikkien muiden väylän laitteiden kanssa. 
 * Tähdessä on keskipiste, johon kaikki laitteen yhdistyvät omilla johtimillaan. Tähden sakaroissa olevat laitteet voivat siis suoraan kommunikoida vain tähden keskipisteen kanssa, jonka pitää välittää viestejä sakaroiden välillä.
