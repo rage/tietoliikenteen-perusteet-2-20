@@ -32,7 +32,7 @@ Liukuvan ikkunan (engl. sliding window) mallissa tavoitteena on, että lähettä
 
 Ikkunan koko määrää sen, kuinka monta kuittaamatonta viestiä voi olla yhtä aikaa matkalla lähettäjältä vastaanottajalle. Lähettäjän ei ole pakko lähettää niitä kaikkia, mutta enempää se ei saa lähettää.
 
-Ikkunan ulkopuolella voi jonossa olla lähetysvuoroa odottavia viestejä. Näitä ei ole vieä lähetetty, joten ne vasta odottavat lähetysvuoroa. Lähettäjä ottaa niitä järjestyksessä käsittelyyn sitä mukaan, kun lähetysikkunaan mahtuu. Tätä kuvataan myös ikkunan siirtymisellä näiden viestien kohdalle.
+Ikkunan ulkopuolella voi jonossa olla lähetysvuoroa odottavia viestejä. Näitä ei ole vielä lähetetty, joten ne vasta odottavat lähetysvuoroa. Lähettäjä ottaa niitä järjestyksessä käsittelyyn sitä mukaan, kun lähetysikkunaan mahtuu. Tätä kuvataan myös ikkunan siirtymisellä näiden viestien kohdalle.
 
 Ikkunasta jo poistuneista viesteistä ei olla enää kiinnostuneita, koska ne kuljetuspalvelu on saanut onnistuneesti siirrettyä lähettäjältä vastaanottajalle.
 
